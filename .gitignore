@@ -68,9 +68,12 @@ web_modules/
 
 # Output of 'npm pack'
 *.tgz
+package-lock.json
 
 # Yarn Integrity file
 .yarn-integrity
+
+
 
 # dotenv environment variable files
 .env
