@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar-collapse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  background-color: #010008fe;
+}
+.navbar-toggler,
+.navbar-brand {
+  z-index: 1;
+}
+.navbar-brand {
+  font-size: 1.8em;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar-collapse .nav-link {
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  color: #fff;
+}
+.navbar-collapse .nav-link:hover,
+.navbar-collapse .nav-link.active {
+  color: #f5df4e;
+}
+.nav-item:not(:last-child) {
+  /* border-bottom: 1px solid gray; */
+  padding: 0.2em 4em;
+}
+@media screen and (min-width: 768px) {
+  .nav-item:not(:last-child) {
+    padding: 0.5em 8em;
+  }
+}
+.navbar-collapse.show {
+  transition: all 0.5s;
+  opacity: 80%;
 }
 
-.App-link {
-  color: #61dafb;
+.hero-section {
+  /* background: url("https://codingyaar.com/wp-content/uploads/body-bg.jpg")
+    no-repeat; */
+
+  background-color: #f5df4e;
+  background-size: cover;
+  height: 100vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.workBtn{
+  margin: 4px;
+  list-style: none;
+  text-decoration: none; 
+
+  border:#000 solid ;
+  background-color: #000;
+  color:#fff;
+}
+.progress-bar{
+  width: 50%;
+}
+
+
+.form-border .form-control {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+  border-radius: 0px;
+  padding-left: 0px !important;
+  color: black;
+}
+.contactUS{
+  background-color: #f5df4e;
+
 }
