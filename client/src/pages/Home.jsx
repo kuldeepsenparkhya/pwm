@@ -1,10 +1,18 @@
 import React from "react";
 import Avatar from "react-avatar";
 import { TypeAnimation } from "react-type-animation";
+import HeaderBar from "../components/headerBar";
+import About from "./About";
+import Service from "./Service";
+import Resume from "./Resume";
+import Skill from "./skills";
+import ContactUS from "./ContactUS";
 
 const Home = () => {
   return (
     <>
+      <HeaderBar />
+
       <div className="hero-section ">
         <div className="container">
           <div className="row py-5  ">
@@ -31,7 +39,7 @@ const Home = () => {
                 distinctio doloremque facilis officiis laboriosam ipsum eaque
                 tempore, hic quidem, culpa animi!
               </p>
-              <ul className="d-flex " >
+              <ul className="d-flex ">
                 <li className="workBtn">
                   <a src="/" className=" ">
                     View my Works
@@ -58,6 +66,11 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <About />
+      <Service />
+      <Resume />
+      <Skill />
+      <ContactUS />
     </>
   );
 };

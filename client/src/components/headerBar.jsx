@@ -1,9 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const HeaderBar = () => {
+  const [navSize, setnavSize] = useState("5rem");
+  const [navColor, setnavColor] = useState("transparent");
+  const listenScrollEvent = () => {
+    window.scrollY > 10 ? setnavColor("#252734") : setnavColor("transparent");
+    window.scrollY > 10 ? setnavSize("5rem") : setnavSize("5rem");
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+    return () => {
+      window.removeEventListener("scroll", listenScrollEvent);
+    };
+  }, []);
+
   return (
     <>
-      <nav className="navbar fixed-top " data-bs-theme="dark">
+      <nav
+        className="navbar fixed-top "
+        data-bs-theme="dark"
+        style={{
+          backgroundColor: navColor,
+          height: navSize,
+          transition: "all 1s",
+        }}
+      >
         <div className="container">
           <a className="navbar-brand fw-bold" href="#">
             Coding Yaar
@@ -48,13 +69,19 @@ const HeaderBar = () => {
               </li>
 
               <li className="nav-item">
-                <a className="nav-link">Contact Me</a>
+                <a className="nav-link" href="/">
+                  Contact Me
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/login">
+                  Login
+                </a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-
     </>
   );
 };

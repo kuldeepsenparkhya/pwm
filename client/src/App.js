@@ -1,23 +1,33 @@
-import './App.css';
-import HeaderBar from './components/headerBar';
-import About from './pages/About';
-import ContactUS from './pages/ContactUS';
+import React, { Suspense } from "react";
+import { BrowserRouter as Router, Route, Routes, BrowserRouter } from 'react-router-dom';
+
 import Home from './pages/Home';
-import Resume from './pages/Resume';
-import Service from './pages/Service';
-import Skill from './pages/skills';
+import Login from './pages/Login';
+
+
+
+import './App.css';
+import AdminSidebar from "./pages/AdminSidebar";
+
 
 function App() {
   return (
-    <>
-      <HeaderBar />
-      <Home />
-      <About />
-      <Service />
-      <Resume />
-      <Skill />
-      <ContactUS/>
-    </>
+    <BrowserRouter>
+      <Suspense>
+
+
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+
+          <Route path="/AdminSidebar" element={<AdminSidebar />} />
+
+          {/* <Route path="/login" element={<Login />} /> */}
+
+        </Routes>
+      </Suspense>
+    </BrowserRouter >
   );
 }
 
