@@ -10,12 +10,16 @@ const bodyParser = require('body-parser');
 const { PORT } = require('./app/config/config');
 
 
+
 app.use(cors({
-    origin: ["*",],
-    methods: ["GET,HEAD,PUT,PATCH,POST,DELETE"],
+    origin: ['http://localhost:3000', ],
+    credentials: true,
+    methods: ['POST', 'PUT', 'GET', 'DELETE'],
     preflightContinue: false,
-    optionsSuccessStatus: 204
-}));
+    optionsSuccessStatus:204
+  }));
+  
+
 
 
 app.use(bodyParser.json())

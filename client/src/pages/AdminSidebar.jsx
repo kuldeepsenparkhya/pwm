@@ -3,6 +3,7 @@ import { IoMenuSharp } from "react-icons/io5";
 
 import "../components/sidebar.css";
 import UserProfile from "./UserProfile";
+import Dashboard from "../components/Dashboard";
 const AdminSidebar = () => {
   return (
     <>
@@ -32,7 +33,8 @@ const AdminSidebar = () => {
           </ul>
         </div>
       </div>
-      <UserProfile/>
+      <Dashboard/>
+      
     </>
   );
 };

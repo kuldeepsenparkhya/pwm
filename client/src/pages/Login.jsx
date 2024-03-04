@@ -1,6 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import { login } from "../redux/slice/authSlice";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const [show, setShow] = useState(false);
+
+  const dispatch = useDispatch();
+
+  const { loading } = useSelector((state) => state.auth);
+
+  const navigate = useNavigate();
+
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+      password: "",
+    },
+    enableReinitialize: true,
+
+    validationSchema: Yup.object({
+      email: Yup.string()
+        .email("string.emailFormat")
+        .required("Email required"),
+      password: Yup.string()
+        .required("Password required")
+        .matches(/^(?=.*)(?=.{6,})/, "string.passwordLength"),
+    }),
+
+    onSubmit: (values) => {
+      dispatch(login(values)).then((result) =>
+        result?.payload?.token ? navigate("/admin") : ""
+      );
+    },
+  });
+
   return (
     <>
       <div className="container">
@@ -11,35 +47,43 @@ const Login = () => {
                 <h2 className="p-3">Login</h2>
               </div>
               <div className="card-body">
-                <form>
+                <form onSubmit={formik.handleSubmit}>
                   <div className="mb-4">
                     <label htmlFor="username" className="form-label">
                       Username/Email
                     </label>
-                    <input type="text" className="form-control" id="username" />
+                    <input
+                      className="form-control"
+                      type="email"
+                      placeholder="Email"
+                      name="email"
+                      value={formik.values.email}
+                      onChange={formik.handleChange}
+                    />
+                    {formik.errors.email && formik.touched.email ? (
+                      <span className="text-red-500">
+                        {formik.errors.email}
+                      </span>
+                    ) : (
+                      ""
+                    )}
                   </div>
                   <div className="mb-4">
                     <label htmlFor="password" className="form-label">
                       Password
                     </label>
                     <input
-                      type="password"
-                      className="form-control"
-                      id="password"
+                      className="form-control text-sm rounded-lg w-full bg-gray-200 focus:bg-gray-100 border border-gray-200 focus:outline-none focus:border-purple-400"
+                      name="password"
+                      placeholder="Password"
+                      type={show ? "text" : "password"}
+                      onChange={formik.handleChange}
+                      value={formik.values.password}
                     />
                   </div>
-                  <div className="mb-4">
-                    <input
-                      type="checkbox"
-                      className="form-check-input"
-                      id="remember"
-                    />
-                    <label htmlFor="remember" className="form-label">
-                      Remember Me
-                    </label>
-                  </div>
+
                   <div className="d-grid">
-                    <button type="submit" className="btn text-light main-bg">
+                    <button type="submit" className="">
                       Login
                     </button>
                   </div>

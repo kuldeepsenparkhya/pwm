@@ -8,6 +8,7 @@ import Login from './pages/Login';
 
 import './App.css';
 import AdminSidebar from "./pages/AdminSidebar";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -21,9 +22,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
 
-          <Route path="/AdminSidebar" element={<AdminSidebar />} />
+          <Route path="/admin" element={<AdminSidebar />} />
 
-          {/* <Route path="/login" element={<Login />} /> */}
+          <Route path="/login" element={<Login />} />
 
         </Routes>
       </Suspense>
