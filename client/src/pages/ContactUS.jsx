@@ -20,53 +20,53 @@ const ContactUS = () => {
             </div>
             <div className="col-6 mt-4">
               <h2 className="fw-bold">Estimate your Project?</h2>
-              <form id="contact-form" class="form-border">
-                <div class="row g-4 ">
-                  <div class="col-12">
-                    <label class="form-label" for="name">
+              <form id="contact-form" className="form-border">
+                <div className="row g-4 ">
+                  <div className="col-12">
+                    <label className="form-label" htmlFor="name">
                       What is Your Name:
                     </label>
                     <input
                       id="name"
                       name="name"
                       type="text"
-                      class="form-control py-1"
+                      className="form-control py-1"
                       required=""
                     />
                   </div>
-                  <div class="col-12">
-                    <label class="form-label" for="email">
+                  <div className="col-12">
+                    <label className="form-label" htmlFor="email">
                       Your Email Address:
                     </label>
                     <input
                       id="email"
                       name="email"
                       type="email"
-                      class="form-control py-1"
+                      className="form-control py-1"
                       required=""
                     />
                   </div>
-                  <div class="col-12">
-                    <label class="form-label" for="form-message">
+                  <div className="col-12">
+                    <label className="form-label" htmlFor="form-message">
                       How can I Help you?:
                     </label>
                     <textarea
                       id="form-message"
                       name="form-message"
-                      class="form-control py-1"
+                      className="form-control py-1"
                       rows="4"
                       required=""
                     ></textarea>
                   </div>
-                  <div class="col-12 text-center text-lg-start">
+                  <div className="workBtn col-2 text-center text-lg-start ">
                     <button
                       id="submit-btn"
-                      class="btn btn-dark rounded-0"
+                      className="workBtn btn btn-dark rounded-0"
                       type="submit"
                     >
                       Send{" "}
-                      <span class="ms-3">
-                        <i class="fas fa-arrow-right"></i>
+                      <span className=" ms-3">
+                        <i className="fas fa-arrow-right"></i>
                       </span>
                     </button>
                   </div>

@@ -10,7 +10,6 @@ module.exports = (app) => {
 
   router.get("/users", users.find);
   router.get("/users/:id", users.findOne);
-  // router.patch("/users/:id", users.update);
   router.patch("/users/profile",fileUploader, users.updateProfile);
 
   app.use("/api", router);

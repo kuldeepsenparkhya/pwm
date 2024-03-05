@@ -33,13 +33,11 @@ require('./app/router/user')(app);
 require('./app/router/auth')(app);
 require('./app/router/media')(app);
 require('./app/router/project')(app);
+require('./app/router/experience')(app);
+
 require('./app/router/skill')(app);
 require('./app/router/blog')(app);
 require('./app/router/gallery')(app);
-
-
-
-
 
 
 app.get('*', (req, res) => handleError('Hunnn smart!', 400, res,));

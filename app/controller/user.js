@@ -109,30 +109,3 @@ exports.updateProfile = async (req, res) => {
     handleError(error, 400, res);
   }
 };
-
-// exports.delete = async (req, res) => {
-//   try {
-//     const { id } = req.params;
-//     if (req.user._id === id || req.user.role === "admin") {
-//       const user = await User.findOne({ _id: id });
-
-//       if (!user) {
-//         handleError("Invailid user.", 400, res);
-//         return;
-//       }
-
-//       await User.deleteOne({ _id: user._id });
-
-//       handleResponse(res, "User successfully removed.", 200);
-//     } else {
-//       handleError(
-//         "User can delete self account or admin can delete user account.",
-//         400,
-//         res
-//       );
-//       return;
-//     }
-//   } catch (error) {
-//     handleError(error.message, 400, res);
-//   }
-// };

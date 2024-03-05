@@ -5,15 +5,7 @@ exports.create = async (req, res) => {
     try {
         const { title, totalExp } = req.body;
 
-        // const { error } = registerUser.validate(req.body, { abortEarly: false });
-
-        // if (error) {
-        //   handleError(error, 400, res);
-        //   return;
-        // }
-
         const file = `/media/${req?.file?.filename}`;
-
 
         const data = { title, totalExp, techLogo: file };
 

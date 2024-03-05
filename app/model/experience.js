@@ -15,7 +15,6 @@ const ExperienceSchema = Schema(
 
     joiningDate: {
       type: Date,
-      required: true,
     },
     leaveDate: {
       type: Date,

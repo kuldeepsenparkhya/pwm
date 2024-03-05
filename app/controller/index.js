@@ -5,5 +5,7 @@ module.exports = {
   skills: require('./skill'),
   blogs: require('./blog'),
   galleries: require('./gallery'),
+  experiences: require('./experience'),
+
 
 };

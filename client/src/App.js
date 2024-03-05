@@ -9,6 +9,7 @@ import Login from './pages/Login';
 import './App.css';
 import AdminSidebar from "./pages/AdminSidebar";
 import 'react-toastify/dist/ReactToastify.css';
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
 
         </Routes>
       </Suspense>
+        <Footer/>
     </BrowserRouter >
   );
 }

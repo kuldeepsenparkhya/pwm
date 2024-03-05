@@ -1,40 +1,47 @@
-import React, { useState } from "react";
-import { IoMenuSharp } from "react-icons/io5";
+import React from "react";
+import { Link } from "react-router-dom";
 
-import "../components/sidebar.css";
-import UserProfile from "./UserProfile";
 import Dashboard from "../components/Dashboard";
+import "../components/sidebar.css";
+
 const AdminSidebar = () => {
   return (
     <>
-      <a className="menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"> <IoMenuSharp size={50} color="black"/> </a>
-      <div className="offcanvas offcanvas-start" tabIndex={-1} id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-        <div className="offcanvas-header">
-          <h5 className="offcanvas-title" id="offcanvasExampleLabel"> Coding yaar </h5>
-          <button type="button"  className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" />
-        </div>
-        <div className="offcanvas-body">
-          <ul>
-            <li>
-              <a className="dropdown-item" href="#">
-                Action
-              </a>
+      <div id="wrapper">
+        <aside id="sidebar-wrapper">
+          <div className="sidebar-brand">
+            <h2>Logo</h2>
+          </div>
+          <ul className="sidebar-nav">
+            <li className="">
+              <Link to="/home">
+                <i className="fa fa-home"></i>Dashboard
+              </Link>
             </li>
             <li>
-              <a className="dropdown-item" href="#">
-                Another action
-              </a>
+              <Link to="/home">
+                <i className="fa fa-home"></i>Profile
+              </Link>
             </li>
             <li>
-              <a className="dropdown-item" href="#">
-                Something else here
-              </a>
+              <Link to="/home">
+                <i className="fa fa-home"></i>Project
+              </Link>
+            </li>
+            <li>
+              <Link to="/home">
+                <i className="fa fa-home"></i>Skill
+              </Link>
+            </li>
+            <li>
+              <Link to="/home">
+                <i className="fa fa-home"></i>Contact Us
+              </Link>
             </li>
           </ul>
-        </div>
+        </aside>
       </div>
-      <Dashboard/>
-      
+      <Dashboard />
     </>
   );
 };
