@@ -19,7 +19,7 @@ const ContactUS = () => {
               <span className="tel">(+060) 444 434 444</span>
             </div>
             <div className="col-6 mt-4">
-              <h2 className="fw-bold">Estimate your Project?</h2>
+              <h2 className="fw-bold">Contact US  </h2>
               <form id="contact-form" className="form-border">
                 <div className="row g-4 ">
                   <div className="col-12">

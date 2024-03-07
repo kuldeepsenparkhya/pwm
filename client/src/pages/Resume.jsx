@@ -11,7 +11,7 @@ const Resume = () => {
 
   useEffect(() => {
     dispatch(experience(""));
-  }, []);
+  }, [dispatch]);
 
 
   return (

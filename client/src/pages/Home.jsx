@@ -9,6 +9,7 @@ import Skill from "./skills";
 import ContactUS from "./ContactUS";
 import { useSelector, useDispatch } from "react-redux";
 import { userAbout } from "../redux/slice/userSlice";
+import Project from "./Project";
 
 const Home = () => {
 
@@ -81,6 +82,7 @@ const Home = () => {
       </div>
       <About />
       <Service />
+      <Project/>
       <Resume />
       <Skill />
       <ContactUS />

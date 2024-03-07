@@ -10,21 +10,19 @@ import './App.css';
 import AdminSidebar from "./pages/AdminSidebar";
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from "./components/Footer";
+import Project from "./pages/Project";
 
 
 function App() {
   return (
     <BrowserRouter>
       <Suspense>
-
-
-
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
 
           <Route path="/admin" element={<AdminSidebar />} />
-
+          <Route path="/projects" element={<Project />} />
           <Route path="/login" element={<Login />} />
 
         </Routes>
