@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Avatar from "react-avatar";
 import { TypeAnimation } from "react-type-animation";
-import HeaderBar from "../components/headerBar";
 import About from "./About";
 import Service from "./Service";
 import Resume from "./Resume";
@@ -10,6 +9,7 @@ import ContactUS from "./ContactUS";
 import { useSelector, useDispatch } from "react-redux";
 import { userAbout } from "../redux/slice/userSlice";
 import Project from "./Project";
+import AppHeader from "../components/AppHeader";
 
 const Home = () => {
 
@@ -25,7 +25,7 @@ const Home = () => {
 
   return (
     <>
-      <HeaderBar />
+      <AppHeader />
       <div className="hero-section">
         <div className="container">
           {data &&

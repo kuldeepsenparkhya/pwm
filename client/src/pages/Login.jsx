@@ -30,10 +30,14 @@ const Login = () => {
         .matches(/^(?=.*)(?=.{6,})/, "string.passwordLength"),
     }),
 
-    onSubmit: (values) => {
-      dispatch(login(values)).then((result) =>
-        result?.payload?.token ? navigate("/admin") : ""
-      );
+    onSubmit:async (values) => {
+      try {
+        await dispatch(login(values));
+        navigate('/app/admindashboard');
+      } catch (error) {
+        console.error("Login failed:", error);
+        // Handle login failure, maybe show an error message
+      }
     },
   });
 

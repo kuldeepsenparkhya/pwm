@@ -1,4 +1,3 @@
-
 img.sb-avatar__image {
   border-radius: 50rem !important;
   padding: 20px;
@@ -23,7 +22,7 @@ img.sb-avatar__image {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  text-align: center !important;
   background-color: #010008fe;
 }
 .navbar-toggler,
@@ -60,8 +59,7 @@ img.sb-avatar__image {
 }
 
 .hero-section {
-   background: url('./assets/images/bg1.jpg')
-    no-repeat; 
+  background: url("./assets/images/bgimage.png") no-repeat;
 
   background-color: #f5df4e;
   background-size: cover;
@@ -117,7 +115,6 @@ input {
   width: 50px;
 }
 
-
 /* fffffffffff */
 
 .image-container {
@@ -146,4 +143,130 @@ input {
 
 .overlay-content img:hover {
   transform: scale(1.2);
+}
+
+
+
+
+
+
+.skill-form button.submitBtn   {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+}
+
+.skill-form button.submitBtn :hover {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,    0 0 100px #03e9f4;
+}
+
+.skill-form button.submitBtn  span {
+  position: absolute;
+  display: block;
+}
+
+.skill-form button.submitBtn  span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+}
+
+.skill-form button.submitBtn span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+}
+
+.skill-form button.submitBtn span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+}
+
+.skill-form button.submitBtn  span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+}
+
+/* KEYFRAMES */
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+/* USING KEYFRAMES */
+
+.skill-form button.submitBtn  span:nth-child(1) {
+  animation: btn-anim1 2s linear infinite;
+}
+
+.skill-form button.submitBtn  span:nth-child(2) {
+  animation: btn-anim2 2s linear infinite;
+  animation-delay: 0.75s;
+}
+
+.skill-form button.submitBtn  span:nth-child(3) {
+  animation: btn-anim3 2s linear infinite;
+  animation-delay: 0.5s;
+}
+
+.skill-form button.submitBtn  span:nth-child(4) {
+  animation: btn-anim4 2s linear infinite;
+  animation-delay:1.5s;
 }

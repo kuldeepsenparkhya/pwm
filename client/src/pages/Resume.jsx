@@ -19,10 +19,10 @@ const Resume = () => {
       <div className="">
         <div className="container">
           <div className="text-center">
-            <span className="bg-warning ">Resume</span>
+            <span className="bg-warning ">CV</span>
           </div>
           <div className="row text-center">
-            <h2 className="fw-bolder">A summary of My Resume</h2>
+            <h2 className="fw-bolder">A summary of My CV</h2>
           </div>
           <div className="row" >
             <div className="col-6">

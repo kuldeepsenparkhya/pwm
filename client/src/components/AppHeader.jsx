@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const HeaderBar = () => {
+const AppHeader = () => {
   const [navSize, setnavSize] = useState("5rem");
   const [navColor, setnavColor] = useState("transparent");
   const listenScrollEvent = () => {
@@ -41,7 +41,7 @@ const HeaderBar = () => {
             <span className="navbar-toggler-icon" />
           </button>
           <div className="collapse navbar-collapse" id="navbarNav5">
-            <ul className="navbar-nav">
+            <ul className="navbar-nav text-center">
               <li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="#">
                   Home
@@ -86,4 +86,4 @@ const HeaderBar = () => {
   );
 };
 
-export default HeaderBar;
+export default AppHeader;

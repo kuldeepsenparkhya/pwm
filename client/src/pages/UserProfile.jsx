@@ -2,25 +2,89 @@ import React from "react";
 
 function UserProfile() {
   return (
-    <div className="container">
-      <div className="row profile">
-        <div className="col-12">
-          <div className="profile-sidebar text-center">
-            <div className="profile-userpic">
-              <img
-                src="https://gravatar.com/avatar/31b64e4876d603ce78e04102c67d6144?s=80&d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png"
-                className="img-responsive"
-                alt=""
-              />
+    <div className="container py-5" style={{ backgroundColor: "#eee",}}>
+      <section >
+        <div className="row">
+          <div className="col-lg-4">
+            <div className="card mb-4">
+              <div className="card-body text-center">
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp"
+                  alt="avatar"
+                  className="rounded-circle img-fluid"
+                  style={{ width: 150 }}
+                />
+                <h5 className="my-3">John Smith</h5>
+                <p className="text-muted mb-1">Full Stack Developer</p>
+                <p className="text-muted mb-4">Bay Area, San Francisco, CA</p>
+                <div className="d-flex justify-content-center mb-2">
+                  <button type="button" className="btn btn-primary">
+                    Follow
+                  </button>
+                  <button
+                    type="button"
+                    className="btn btn-outline-primary ms-1"
+                  >
+                    Message
+                  </button>
+                </div>
+              </div>
             </div>
-
-            <div className="profile-usertitle">
-              <div className="profile-usertitle-name">Jason Davis</div>
-              <div className="profile-usertitle-job">Developer</div>
+          </div>
+          <div className="col-lg-8">
+            <div className="card mb-4">
+              <div className="card-body">
+                <div className="row">
+                  <div className="col-sm-3">
+                    <p className="mb-0">Full Name</p>
+                  </div>
+                  <div className="col-sm-9">
+                    <p className="text-muted mb-0">Johnatan Smith</p>
+                  </div>
+                </div>
+                <hr />
+                <div className="row">
+                  <div className="col-sm-3">
+                    <p className="mb-0">Email</p>
+                  </div>
+                  <div className="col-sm-9">
+                    <p className="text-muted mb-0">example@example.com</p>
+                  </div>
+                </div>
+                <hr />
+                <div className="row">
+                  <div className="col-sm-3">
+                    <p className="mb-0">Phone</p>
+                  </div>
+                  <div className="col-sm-9">
+                    <p className="text-muted mb-0">(097) 234-5678</p>
+                  </div>
+                </div>
+                <hr />
+                <div className="row">
+                  <div className="col-sm-3">
+                    <p className="mb-0">Mobile</p>
+                  </div>
+                  <div className="col-sm-9">
+                    <p className="text-muted mb-0">(098) 765-4321</p>
+                  </div>
+                </div>
+                <hr />
+                <div className="row">
+                  <div className="col-sm-3">
+                    <p className="mb-0">Address</p>
+                  </div>
+                  <div className="col-sm-9">
+                    <p className="text-muted mb-0">
+                      Bay Area, San Francisco, CA
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

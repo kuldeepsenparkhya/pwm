@@ -5,7 +5,7 @@ import instance from '../axios/axios'
 const initialState = {
     loading: false,
     loggedInUser: {},
-    isUserLoggedIn: document.cookie ? true : false
+    isUserLoggedIn: localStorage.getItem('token') ? true : false
 }
 
 export const login = createAsyncThunk('account/login', async (data, { rejectWithValue }) => {
@@ -65,6 +65,7 @@ const authSlice = createSlice({
                 state.isUserLoggedIn = true
                 state.loggedInUser = action.payload
                 toast.success(action.payload.message);
+                localStorage.setItem('token', action.payload.token)
             })
             .addCase(login.rejected, (state,) => {
                 state.loading = false
@@ -131,7 +132,7 @@ const authSlice = createSlice({
         // [logOut.rejected]: (state,) => {
         //     state.loading = false
         // },
-        }
+    }
 })
 
 export default authSlice.reducer
